@@ -1,0 +1,84 @@
+#!usr/bin/python
+
+#Script file to run deterministic replay tool
+
+import os
+import subprocess
+import sys
+import argparse
+
+
+parser = argparse.ArgumentParser(description='Read command line options')
+parser.add_argument('-v', '--verbose', action="store_true", 
+                    dest="verbose", default=False
+                    ,help="Run tool in verbose mode")
+parser.add_argument('-f', '--follow', action="store", 
+                    dest="follow", default=False, 
+                    help="Specify an execution to run the tool in")
+parser.add_argument('--sched', '-s', action="store", dest="schedule", default=False,
+                   help="The schedule to be followed")
+parser.add_argument('-e', '--exec', action="store", dest="executable", default=False,
+                    help="The executable to be run")
+
+results = parser.parse_args()
+
+#print results.verbose
+#print results.follow
+#print results.schedule
+#print results.executable
+
+
+#determine from the command line arguments if an execution flag has been raised
+if(results.follow == "e"):
+    os.environ['FOLLOW_TO_END'] = "yes"
+    print "\nFOLLOW_TO_END flag set........"
+elif(results.follow == "t"):
+    os.environ['FOLLOW_AND_TERMINATE'] = "yes"
+    print "\nFOLLOW_END_TERMINATE flag set......."
+elif(results.follow == "n"):
+    print "\nRunning in DEFAULT MODE ........"
+
+
+if(results.verbose != False):
+    os.environ['KLEE_VERBOSE_MODE'] = "yes"
+    print "\nVERBOSE flag set......."
+
+print "\nSetting up environment....\n"
+
+
+#find out what shell the user is using
+shell = os.environ['SHELL']
+res = shell.split("/")
+sh = res[-1]
+
+
+absp = os.path.abspath('../bin')
+
+if(results.schedule == False):
+    print "Please specify a schedule to follow\n" 
+    print "Tool cannot print without a valid schedule.....will exit now"
+    sys.exit(1)
+
+if(results.executable == False):
+    print "Please specify an executable to run"
+    print "Tool cannot run without a valid executable......will exit now"
+    sys.exit(1)
+
+
+#Set environment variable so that schedule can be accessed dynamically
+schedloc = os.path.abspath('schedules');
+schedp = schedloc + "/" + results.schedule
+print schedp
+os.environ['KLEE_SCHED'] = schedp
+
+
+
+
+#Set up the LD_PRELOAD variable to enable dynamic function interposition
+ld_prel = absp + "/libintercept.so"
+
+print "\nCalling executable....\n"
+t = sh + " -c env "
+path = "LD_PRELOAD=\"" + ld_prel + "\" " + "./" + results.executable
+complete = t + path
+os.system(path)

@@ -1,0 +1,165 @@
+Script started on Thu 09 Aug 2012 15:21:32 BST
+fusion15% python runtool.py -fn -e setters -ssetters/test000012.schedule
+
+Running in DEFAULT MODE ........
+
+Setting up environment....
+
+/homes/hg311/DeterministicReplay/tool/schedules/setters/test000012.schedule
+
+Calling executable....
+
+Schedule to be followed:
+[0 0 0 1 1 1 1 2 2 2 2 4 4 4 4 0 0 3 3 3 3 1 1 1 0 ]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x207) [0x7fed759c9ff3]
+./setters() [0x400852]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0x61) [0x7fed759ca541]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x250) [0x7fed759ca03c]
+./setters() [0x400852]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x255) [0x7fed759ca041]
+./setters() [0x400852]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x207) [0x7fed759c9ff3]
+./setters() [0x4008a9]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0x61) [0x7fed759ca541]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x250) [0x7fed759ca03c]
+./setters() [0x4008a9]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x255) [0x7fed759ca041]
+./setters() [0x4008a9]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_join+0x5f) [0x7fed759ca0a5]
+./setters() [0x4008d5]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xff) [0x7fed7542eeff]
+./setters() [0x400689]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x207) [0x7fed759c9ff3]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0x61) [0x7fed759ca541]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 7 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x250) [0x7fed759ca03c]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x255) [0x7fed759ca041]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x207) [0x7fed759c9ff3]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 5 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0x61) [0x7fed759ca541]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 7 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x250) [0x7fed759ca03c]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_create+0x255) [0x7fed759ca041]
+./setters() [0x4007da]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 7 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_join+0x5f) [0x7fed759ca0a5]
+./setters() [0x400806]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_join+0x64) [0x7fed759ca0aa]
+./setters() [0x400806]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 6 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_join+0xc7) [0x7fed759ca10d]
+./setters() [0x400806]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Obtained 7 stack frames.
+/homes/hg311/DeterministicReplay/bin/libintercept.so(print_trace+0x19) [0x7fed759cab74]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(wait+0xd) [0x7fed759ca5ad]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(pthread_join+0xdb) [0x7fed759ca121]
+./setters() [0x400806]
+/homes/hg311/DeterministicReplay/bin/libintercept.so(run_thread+0xa7) [0x7fed759ca587]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x6d8c) [0x7fed757aad8c]
+/lib/x86_64-linux-gnu/libc.so.6(clone+0x6d) [0x7fed754f604d]
+Potential deadlock detected!
+Tool will now exit with error code: 5
+
+The tool followed the following schedule in this execution run
+[0 0 0 1 1 1 1 2 ]
+fusion15% exit
+exit
+
+Script done on Thu 09 Aug 2012 15:21:42 BST

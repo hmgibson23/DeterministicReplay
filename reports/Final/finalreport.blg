@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: finalreport.aux
+The style file: ieeetr.bst
+Database file #1: mybib.bib
+Warning--entry type for "FunInt" isn't style-file defined
+--line 109 of file mybib.bib
+Warning--entry type for "tsan" isn't style-file defined
+--line 144 of file mybib.bib
+Warning--entry type for "detours" isn't style-file defined
+--line 151 of file mybib.bib
+You've used 18 entries,
+            1876 wiz_defined-function locations,
+            590 strings with 6270 characters,
+and the built_in function-call counts, 5150 in all, are:
+= -- 479
+> -- 191
+< -- 0
++ -- 70
+- -- 52
+* -- 333
+:= -- 698
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 280
+empty$ -- 534
+format.name$ -- 52
+if$ -- 1299
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 14
+newline$ -- 57
+num.names$ -- 20
+pop$ -- 96
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 335
+swap$ -- 110
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 48
+width$ -- 20
+write$ -- 167
+(There were 3 warnings)

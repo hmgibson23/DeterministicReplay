@@ -1,0 +1,215 @@
+\relax 
+\@writefile{toc}{\vspace {10pt}}
+\@writefile{toc}{\contentsline {chapter}{List of Tables}{6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Deterministic Replay}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Motivation}{7}}
+\citation{Pt}
+\citation{KLEE}
+\citation{dut}
+\citation{DejaVu,Huang}
+\newlabel{lst:simpleshared}{{1.1}{8}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1.1}Shared Variable Accesses}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Objectives}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Contributions}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Results}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Pthreads API Table}}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Structure of this Report}{11}}
+\citation{Sutter}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Background and Related Work}{12}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Concurrency}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{Race Conditions}{12}}
+\citation{lev}
+\citation{Coff}
+\newlabel{lst:basicrace}{{2.1}{13}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}A Basic Data Race}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{Deadlock}{13}}
+\citation{Pt}
+\citation{KLEE}
+\citation{Pt}
+\newlabel{lst:basicdeadlock}{{2.2}{14}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}A Basic Deadlock}{14}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Bug Detection}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}KLEETHREADS}{14}}
+\citation{Savage}
+\citation{Lamport}
+\citation{valgrind}
+\citation{PIN}
+\citation{tsan}
+\citation{tsan}
+\citation{tsan}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Helgrind}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}ThreadSanitizer}{15}}
+\citation{chess}
+\citation{Huang}
+\citation{Huang}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Record/Replay Tools}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}CHESS}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}LEAP}{16}}
+\citation{Huang}
+\citation{Huang}
+\citation{DejaVu}
+\citation{DejaVu}
+\citation{DejaVu}
+\citation{ODR}
+\citation{ODR}
+\citation{ODR}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}DejaVu}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Other Approaches}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Output Deterministic Replay}{17}}
+\citation{FunInt}
+\citation{detours}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Function Interception Techniques}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}Function Interposition in Linux}{18}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Detouring in Windows}{19}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Approach}{20}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Function Overriding}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Thread Scheduling}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Synchronisation Points}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}P-Rep's Thread Scheduling}{22}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Wait}{22}}
+\newlabel{lst:waitmain}{{3.1}{23}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.1}The \texttt  {wait()} function}{23}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Step and Notify}{23}}
+\newlabel{lst:stepmain}{{3.2}{24}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.2}The \texttt  {step\_and\_notify()} function}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Modes of Execution}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Default Execution Mode}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}FOLLOW\_AND\_TERMINATE}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}FOLLOW\_TO\_END}{25}}
+\newlabel{lst:nofollow}{{3.3}{25}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.3}\texttt  {no\_follow()} function}{25}}
+\newlabel{lst:badendmutex}{{3.4}{26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.4}Mutex locking when FOLLOW\_TO\_END set}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}RECORD Mode}{27}}
+\newlabel{lst:monitorbad}{{3.5}{27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.5}Modified Monitor Thread}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.5}Modified \texttt  {wait()}}{29}}
+\newlabel{lst:fullwait}{{3.6}{29}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.6}The modified \texttt  {wait()} function}{29}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Development}{30}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Thread ID creation and Assignment}{30}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Thread Map Example}}{30}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}The Thread Map}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Wrapper Library}{32}}
+\newlabel{lst:induce}{{4.2}{33}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.2}Forcing a schedule}{33}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Function Interposition}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Dynamic Interception}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Unwanted Recursive Function Calls}{34}}
+\newlabel{lst:renamed}{{4.3}{34}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.3}Renamed Pthreads Functions}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Problems with Wrapper Library and Function Interception}{35}}
+\newlabel{sec:tprobs}{{4.3.3}{35}}
+\newlabel{lst:wrapper}{{4.4}{35}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.4}\texttt  {intercept\_pthread\_create}}{35}}
+\newlabel{lst:runrace}{{4.5}{37}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.5}\texttt  {run\_thread} with data race removed}{37}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Pthreads API}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}{pthread\_join()} and run\_thread()}{37}}
+\newlabel{lst:create}{{4.6}{38}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.6}Intercepting \texttt  {pthread\_create}}{38}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.7}The \texttt  {params} struct}{39}}
+\newlabel{lst:runthread}{{4.8}{39}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.8}The \texttt  {run\_thread} function}{39}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}pthread\_join()}{40}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.9}Implementation for \texttt  {pthread\_join}}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}pthread\_mutex\_lock() and pthread\_mutex\_unlock()}{42}}
+\newlabel{lst:lockandunlock}{{4.10}{42}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.10}Implementation of mutex lock and unlock}{42}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}pthread\_cond\_wait()}{43}}
+\newlabel{lst:condwait}{{4.11}{43}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.11}Implementation of \texttt  {pthread\_cond\_wait}}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}pthread\_cond\_timedwait()}{44}}
+\newlabel{lst:timedwait}{{4.12}{44}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4.12}Implementation of \texttt  {pthread\_cond\_timedwait}}{44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.6}Problems}{44}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Testing and Evaluation}{45}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Testing Method}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Hand-written Tests}{45}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.1}Simple program using all overridden features}{46}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Deadlock Tests}{47}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Simple Scheduling Results}}{48}}
+\newlabel{tb:condtestres}{{5.1}{48}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Deadlock Schedule Results}}{49}}
+\newlabel{tb:deadlockshedres}{{5.2}{49}}
+\citation{dining}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}KLEETHREADS Test Suite}{50}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Testing RECORD mode}{50}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Dining Philosophers Record Results}}{51}}
+\newlabel{tb:recordeads}{{5.3}{51}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.2}Unprotected Shared Variable}{51}}
+\newlabel{tb:newres}{{5.2.3}{52}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Producers/Consumers Record Results}}{52}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Efficiency Tests}{52}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Comparison of Wrapper Library and Function Intercepting Efficiency}{52}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.3}Wrapper Library Speed Test}{52}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.4}Function Interception Speed Test}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Speed Test Results}}{55}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Portability}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Mac OS X}{55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}BSD}{56}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Overall Evaluation}{56}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{58}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Achievements}{58}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Future Work}{58}}
+\bibdata{mybib}
+\bibcite{dut}{1}
+\bibcite{Sutter}{2}
+\bibcite{lev}{3}
+\bibcite{Coff}{4}
+\bibcite{KLEE}{5}
+\bibcite{Pt}{6}
+\bibcite{Savage}{7}
+\bibcite{Lamport}{8}
+\bibcite{valgrind}{9}
+\bibcite{PIN}{10}
+\bibcite{tsan}{11}
+\bibcite{chess}{12}
+\bibcite{Huang}{13}
+\bibcite{DejaVu}{14}
+\bibcite{ODR}{15}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Bibliography}{60}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\bibcite{FunInt}{16}
+\bibcite{detours}{17}
+\bibcite{dining}{18}
+\bibstyle{ieeetr}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Full Test Results}{62}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Functions Intercepting Speed Test Results}}{63}}
+\newlabel{tb:intres}{{A.1}{63}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Wrapper Library Speed Test Results}}{63}}
+\newlabel{tb:wrapres}{{A.2}{63}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Full Program Listings}{64}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{lst:deadlocktest}{{B.1}{64}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}A program leading to deadlock}{64}}
+\newlabel{lst:dp}{{B.2}{65}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.2}Dining Philosophers Problem}{65}}
+\newlabel{lst:producers}{{B.3}{66}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.3}Producers/Consumers Problem}{66}}
+\newlabel{lst:hb1}{{B.4}{67}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.4}HB Graph Test 1}{67}}
+\newlabel{lst:hb2}{{B.5}{68}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.5}HB Graph Test 2}{68}}
+\newlabel{lst:hb3}{{B.6}{69}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.6}HB Graph Test 3}{69}}
+\newlabel{lst:hb4}{{B.7}{69}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.7}HB Graph Test 4}{69}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {B.8}Python Script to Launch Tool}{71}}

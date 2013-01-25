@@ -1,0 +1,19 @@
+\vspace{5em}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[ht!]
+\caption{Pthreads API Table}
+\begin{center}
+\begin{tabular*}{0.6\textwidth}{@{\extracolsep{\fill}}| l | l |}
+\hline
+\textbf{API Function} & \textbf{Usage} \\ \hline
+pthread\_create(...) & Thread Creation \\ \hline
+pthread\_join(...) & Thread termination \\ \hline
+pthread\_mutex\_lock(...) & Mutex locking \\ \hline
+pthread\_mutex\_unlock(...) & Mutex unlocking \\ \hline
+pthread\_cond\_wait(...) & Condition waiting \\ \hline
+pthread\_cond\_broadcast(...) & Condition signalling \\ \hline
+pthread\_timed\_wait(...) & Condition Waiting \\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}

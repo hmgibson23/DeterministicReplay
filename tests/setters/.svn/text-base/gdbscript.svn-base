@@ -1,0 +1,17 @@
+set width 0
+set height 0
+set verbose off
+set breakpoint pending on
+break print_trace
+commands 1
+backtrace
+continue
+end
+
+set logging redirect on
+set logging overwrite on
+set logging file scheduleOutput.log
+set logging on
+
+run
+

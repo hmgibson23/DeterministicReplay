@@ -1,0 +1,71 @@
+\vspace {10pt}
+\contentsline {chapter}{List of Tables}{6}
+\contentsline {chapter}{\numberline {1}Introduction}{7}
+\contentsline {section}{\numberline {1.1}Deterministic Replay}{7}
+\contentsline {section}{\numberline {1.2}Motivation}{7}
+\contentsline {section}{\numberline {1.3}Objectives}{9}
+\contentsline {section}{\numberline {1.4}Contributions}{9}
+\contentsline {section}{\numberline {1.5}Results}{9}
+\contentsline {section}{\numberline {1.6}Structure of this Report}{11}
+\contentsline {chapter}{\numberline {2}Background and Related Work}{12}
+\contentsline {section}{\numberline {2.1}Concurrency}{12}
+\contentsline {subsubsection}{Race Conditions}{12}
+\contentsline {subsubsection}{Deadlock}{13}
+\contentsline {section}{\numberline {2.2}Bug Detection}{14}
+\contentsline {subsection}{\numberline {2.2.1}KLEETHREADS}{14}
+\contentsline {subsection}{\numberline {2.2.2}Helgrind}{15}
+\contentsline {subsection}{\numberline {2.2.3}ThreadSanitizer}{15}
+\contentsline {section}{\numberline {2.3}Record/Replay Tools}{16}
+\contentsline {subsection}{\numberline {2.3.1}CHESS}{16}
+\contentsline {subsection}{\numberline {2.3.2}LEAP}{16}
+\contentsline {subsection}{\numberline {2.3.3}DejaVu}{17}
+\contentsline {section}{\numberline {2.4}Other Approaches}{17}
+\contentsline {subsection}{\numberline {2.4.1}Output Deterministic Replay}{17}
+\contentsline {section}{\numberline {2.5}Function Interception Techniques}{18}
+\contentsline {subsection}{\numberline {2.5.1}Function Interposition in Linux}{18}
+\contentsline {subsection}{\numberline {2.5.2}Detouring in Windows}{19}
+\contentsline {chapter}{\numberline {3}Approach}{20}
+\contentsline {section}{\numberline {3.1}Function Overriding}{20}
+\contentsline {section}{\numberline {3.2}Thread Scheduling}{21}
+\contentsline {section}{\numberline {3.3}Synchronisation Operations}{21}
+\contentsline {section}{\numberline {3.4}P-Rep's Thread Scheduling}{22}
+\contentsline {section}{\numberline {3.5}Wait}{22}
+\contentsline {section}{\numberline {3.6}Step and Notify}{23}
+\contentsline {section}{\numberline {3.7}Modes of Execution}{23}
+\contentsline {subsection}{\numberline {3.7.1}Default Execution Mode}{24}
+\contentsline {subsection}{\numberline {3.7.2}FOLLOW\_AND\_TERMINATE}{24}
+\contentsline {subsection}{\numberline {3.7.3}FOLLOW\_TO\_END}{25}
+\contentsline {subsection}{\numberline {3.7.4}RECORD Mode}{27}
+\contentsline {subsection}{\numberline {3.7.5}Modified \texttt {wait()}}{28}
+\contentsline {chapter}{\numberline {4}Development}{29}
+\contentsline {section}{\numberline {4.1}Thread ID creation and Assignment}{29}
+\contentsline {section}{\numberline {4.2}Wrapper Library}{31}
+\contentsline {section}{\numberline {4.3}Function Interposition}{32}
+\contentsline {subsection}{\numberline {4.3.1}Dynamic Interception}{32}
+\contentsline {subsection}{\numberline {4.3.2}Unwanted Recursive Function Calls}{33}
+\contentsline {subsection}{\numberline {4.3.3}Problems with Wrapper Library and Function Interception}{34}
+\contentsline {section}{\numberline {4.4}Pthreads API}{36}
+\contentsline {subsection}{\numberline {4.4.1}{pthread\_join()} and run\_thread()}{36}
+\contentsline {subsection}{\numberline {4.4.2}pthread\_join()}{39}
+\contentsline {subsection}{\numberline {4.4.3}pthread\_mutex\_lock() and pthread\_mutex\_unlock()}{41}
+\contentsline {subsection}{\numberline {4.4.4}pthread\_cond\_wait()}{42}
+\contentsline {subsection}{\numberline {4.4.5}pthread\_cond\_timedwait()}{43}
+\contentsline {subsection}{\numberline {4.4.6}Problems}{43}
+\contentsline {chapter}{\numberline {5}Testing and Evaluation}{44}
+\contentsline {section}{\numberline {5.1}Testing Method}{44}
+\contentsline {section}{\numberline {5.2}Hand-written Tests}{44}
+\contentsline {subsection}{\numberline {5.2.1}Deadlock Tests}{46}
+\contentsline {subsection}{\numberline {5.2.2}KLEETHREADS Test Suite}{49}
+\contentsline {subsection}{\numberline {5.2.3}Testing RECORD mode}{49}
+\contentsline {section}{\numberline {5.3}Efficiency Tests}{51}
+\contentsline {subsection}{\numberline {5.3.1}Comparison of Wrapper Library and Function Intercepting Efficiency}{51}
+\contentsline {section}{\numberline {5.4}Portability}{54}
+\contentsline {subsection}{\numberline {5.4.1}Mac OS X}{54}
+\contentsline {subsection}{\numberline {5.4.2}BSD}{55}
+\contentsline {section}{\numberline {5.5}Overall Evaluation}{55}
+\contentsline {chapter}{\numberline {6}Conclusion}{57}
+\contentsline {section}{\numberline {6.1}Achievements}{57}
+\contentsline {section}{\numberline {6.2}Future Work}{57}
+\contentsline {chapter}{\numberline {7}Bibliography}{59}
+\contentsline {chapter}{\numberline {A}Full Test Results}{61}
+\contentsline {chapter}{\numberline {B}Full Program Listings}{63}
