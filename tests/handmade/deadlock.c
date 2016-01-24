@@ -37,17 +37,17 @@ void* t1(void* args)
 {
   pthread_t otherHandles[NUM_THREADS1];
   size_t i;
-  
+
   for(i=0; i < NUM_THREADS1; ++i)
   {
     pthread_create(&otherHandles[i], NULL, locker2, NULL);
   }
-  
+
   for(i=0; i < NUM_THREADS1; ++i)
   {
     pthread_join(otherHandles[i], NULL);
   }
-  
+
   return 0;
 }
 
@@ -55,24 +55,24 @@ int main(int argc, char** argv)
 {
   pthread_mutex_init(&mutexA, NULL);
   pthread_mutex_init(&mutexB, NULL);
-  
+
   pthread_t handle;
-  
+
   pthread_create(&handle, NULL, t1, NULL);
-  
+
   pthread_t handles[NUM_THREADS2];
   size_t i;
   for(i=0; i < NUM_THREADS2; ++i)
   {
     pthread_create(&handles[i], NULL, locker1, NULL);
   }
-  
+
   for(i=0; i < NUM_THREADS2; ++i)
   {
     pthread_join(handles[i], NULL);
   }
-  
+
   pthread_join(handle, NULL);
-  
+
   return 0;
 }
